@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,8 @@ public class PauseMenu : MonoBehaviour
 {
     public bool isPaused = false;
     public GameObject pauseMenuUI;
-    public AudioSource gameSound;
+    public AudioSource ambience;
+    public AudioSource drops;
 
     void Start()
     {
@@ -41,7 +43,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
-        gameSound.Pause();
+        drops.Pause();
+        ambience.Pause();
     }
 
     public void ResumeGame()
@@ -50,7 +53,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
-        gameSound.UnPause();
+        drops.UnPause();
+        ambience.UnPause();
     }
 
     public void Quit()
