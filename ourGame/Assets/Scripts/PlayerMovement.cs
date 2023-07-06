@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
-    public float speed = 20f;
+    public float speed = 13f;
     public float gravity = -19.61f;
-    public float jump = 100f;
+    public float jump = 10f;
 
     Vector3 velocity;
     bool isGrounded;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(speed * Time.deltaTime * move);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
