@@ -177,8 +177,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a0b253923f788f8498a9523aeba4b098, type: 3}
   - {fileID: 8300000, guid: 5c8b0fee88a9dc641bb9ab8adb9c925b, type: 3}
   - {fileID: 8300000, guid: 9b8413df1e21a76449d256e178bb4254, type: 3}
-  minTimeBetweenFootsteps: 0.6
-  maxTimeBetweenFootsteps: 1
+  minTimeBetweenFootsteps: 0.7
+  maxTimeBetweenFootsteps: 1.1
 --- !u!82 &3571560
 AudioSource:
   m_ObjectHideFlags: 0
@@ -966,9 +966,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 10
+  m_Color: {r: 0.8867924, g: 0.4334336, b: 0.045176145, a: 1}
+  m_Intensity: 5.3
+  m_Range: 43.03
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1037,8 +1037,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943198763}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 7.52, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1899,7 +1899,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4b890d92c4570c4458c737875d5eba1a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.205
+  m_Volume: 0.404
   m_Pitch: 0.8
   Loop: 0
   Mute: 0
@@ -2053,7 +2053,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 597103af9a69ced45948bca01d9d915e, type: 2}
     - target: {fileID: 919132149155446097, guid: a6dcaea74ab2def42ad75efd59fc10fe, type: 3}
       propertyPath: m_Name
-      value: map1
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2321,9 +2321,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dc2bbb483da5f0e42941bbdf8a42df16, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 0.5
-  Loop: 0
+  m_Volume: 0.3
+  m_Pitch: 0.6
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2603,6 +2603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fde83c01412c6044f88cd811821df80d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a72089e7c30ccca4297ef743f248baea, type: 2}
     - target: {fileID: 919132149155446097, guid: fde83c01412c6044f88cd811821df80d, type: 3}
       propertyPath: m_Name
       value: door
@@ -2757,6 +2761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0d668b216d67fa041b238e28e3036754, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6dc2d2c156deb0845b01f0ab570649f1, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d668b216d67fa041b238e28e3036754, type: 3}
       propertyPath: m_Name
       value: frame
@@ -2868,7 +2876,7 @@ CharacterController:
   m_Radius: 0.6
   m_SlopeLimit: 45
   m_StepOffset: 5
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.06
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1788436175
@@ -2903,9 +2911,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1788436174}
-  speed: 130
+  speed: 30
   gravity: -19.61
-  jump: 30
+  jump: 5
 --- !u!114 &1788436177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3376,7 +3384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 1991516729}
-  InteractRange: 50
+  InteractRange: 15
 --- !u!1 &2069853276
 GameObject:
   m_ObjectHideFlags: 0
