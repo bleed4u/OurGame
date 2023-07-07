@@ -18,7 +18,7 @@ public class Deathscript : MonoBehaviour
         }
     }
 
-    private void Death()
+    public void Death()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 0f;
