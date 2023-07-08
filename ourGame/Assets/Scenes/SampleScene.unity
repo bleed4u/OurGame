@@ -598,15 +598,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f51328224d4683442a6cfc6a8020157f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 24.420282
+      value: 32.035217
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f51328224d4683442a6cfc6a8020157f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 24.420279
+      value: 32.035213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f51328224d4683442a6cfc6a8020157f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.420269
+      value: 32.035202
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f51328224d4683442a6cfc6a8020157f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f51328224d4683442a6cfc6a8020157f, type: 3}
       propertyPath: m_Name
-      value: Lever
+      value: LeverPick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4057,7 +4057,7 @@ GameObject:
   - component: {fileID: 1932527216}
   - component: {fileID: 1932527215}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ScreamPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
