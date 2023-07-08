@@ -1,6 +1,3 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,15 +6,24 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused = false;
     public GameObject pauseMenuUI;
     public AudioSource ambience;
-    public AudioSource drops;
+    public AudioSource gameSound;
+
+    private float privateDelta;
 
     void Start()
     {
         pauseMenuUI.SetActive(false);
+        gameSound.volume = 0f;
+        privateDelta = Time.deltaTime;
     }
 
     void Update()
     {
+        if (!isPaused && gameSound.volume < 1f)
+        {
+            gameSound.volume += 0.001f * privateDelta;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -43,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
-        drops.Pause();
+        gameSound.Pause();
         ambience.Pause();
     }
 
@@ -53,7 +59,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
-        drops.UnPause();
+        gameSound.UnPause();
         ambience.UnPause();
     }
 

@@ -6,6 +6,12 @@ public class LeverHolderScript : MonoBehaviour, IInteractable
 {
     public GameObject Lever;
     public Animator leverAnimator;
+    private AudioSource sound;
+
+    public void Start()
+    {
+        sound = GetComponent<AudioSource>();
+    }
 
     public void Interact()
     {
@@ -18,9 +24,12 @@ public class LeverHolderScript : MonoBehaviour, IInteractable
         }
         else if (puzzle.isLeverInHolder)
         {
-            if (leverAnimator != null)
+            var startTime = Time.time;
+            sound.Play();
+            leverAnimator.SetTrigger("LeverDown");
+            if (startTime - Time.time == 2)
             {
-                leverAnimator.SetTrigger("LeverDown");
+                sound.Stop();
             }
         }
     }

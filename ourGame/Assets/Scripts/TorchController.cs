@@ -6,21 +6,23 @@ using UnityEngine.SceneManagement;
 public class TorchController : MonoBehaviour
 {
     public Light myLight;
-    private float startIntensity;
+    public float startIntensity;
+    private Deathscript deathScript;
 
     private void Start()
     {
         startIntensity = myLight.intensity;
+        deathScript = GetComponent<Deathscript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        myLight.intensity -= Time.deltaTime * 0.01f * startIntensity;
+        myLight.intensity -= Time.deltaTime * 0.015f * startIntensity;
         
         if (myLight.intensity == 0)
         {
-            GetComponent<Deathscript>().Death();
+            deathScript.Death();
         }
     }
 }

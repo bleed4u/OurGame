@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Deathscript : MonoBehaviour
 {
-    public float delay = 2.5f;
+    public float delay = 3f;
     public GameObject deathScreen;
     public AudioSource ambience;
-    public AudioSource drops;
+    public AudioSource menuSound;
     public AudioSource dead;
 
     private void OnTriggerEnter(Collider other)
@@ -24,7 +24,7 @@ public class Deathscript : MonoBehaviour
         Time.timeScale = 0f;
         deathScreen.SetActive(true);
         ambience.Pause();
-        drops.Pause();
+        menuSound.Pause();
         dead.Play();
 
         StartCoroutine(Delay(delay));
@@ -37,6 +37,6 @@ public class Deathscript : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1f;
         ambience.UnPause();
-        drops.UnPause();
+        menuSound.UnPause();
     }
 }
