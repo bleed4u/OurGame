@@ -17,7 +17,7 @@ public class FuelController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.E))
         {
-            Ray r = new Ray(InteractorSource.position,InteractorSource.forward);
+            Ray r = new(InteractorSource.position,InteractorSource.forward);
             if(Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
             {
                 if(hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))

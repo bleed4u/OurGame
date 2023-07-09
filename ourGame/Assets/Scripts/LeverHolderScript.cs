@@ -20,6 +20,7 @@ public class LeverHolderScript : MonoBehaviour, IInteractable
         if (!puzzle.isLeverInHolder && puzzle.hasLever)
         {
             puzzle.isLeverInHolder = true;
+            puzzle.hasLever = false;
             Lever.SetActive(true);
         }
         else if (puzzle.isLeverInHolder)
@@ -31,6 +32,7 @@ public class LeverHolderScript : MonoBehaviour, IInteractable
             {
                 sound.Stop();
             }
+            puzzle.isLeverInHolder = false;
         }
     }
 }

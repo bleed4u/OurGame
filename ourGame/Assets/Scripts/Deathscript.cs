@@ -8,12 +8,13 @@ public class Deathscript : MonoBehaviour
     public GameObject deathScreen;
     public AudioSource ambience;
     public AudioSource menuSound;
-    public AudioSource dead;
+    public AudioSource fell;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            fell.Play();
             Death();
         }
     }
@@ -25,7 +26,6 @@ public class Deathscript : MonoBehaviour
         deathScreen.SetActive(true);
         ambience.Pause();
         menuSound.Pause();
-        dead.Play();
 
         StartCoroutine(Delay(delay));
     }

@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!isPaused && gameSound.volume < 1f)
         {
-            gameSound.volume += 0.001f * privateDelta;
+            gameSound.volume += 0.002f * privateDelta;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
